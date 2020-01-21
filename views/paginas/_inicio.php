@@ -22,10 +22,10 @@
 		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<button type="button" class="btn btn-secondary">Insertar</button>
+					
 				</li>
 			</ul>
 		</div>
@@ -51,30 +51,15 @@
 						<td>Mark</td>
 						<td>@mdo</td>
 						<td>
-							<button type="button" class="btn btn-primary">Editar</button>
-							<button type="button" class="btn btn-danger">Eliminar</button>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">2</th>
-						<td>Jacob</td>
-						<td>@fat</td>
-						<td>
-							<button type="button" class="btn btn-primary">Editar</button>
-							<button type="button" class="btn btn-danger">Eliminar</button>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">3</th>
-						<td>Larry</td>
-						<td>@twitter</td>
-						<td>
-							<button type="button" class="btn btn-primary">Editar</button>
+							<button type="button" class="btn btn-info">Editar</button>
 							<button type="button" class="btn btn-danger">Eliminar</button>
 						</td>
 					</tr>
 				</tbody>
 			</table>
+			<div class="text-left">
+				<a href="_form-insertar.php" class="btn btn-primary text-left">Insertar registro</a>				
+			</div>
 		</div>
 
 	</main><!-- /.container -->
