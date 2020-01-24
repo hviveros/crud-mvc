@@ -1,3 +1,10 @@
+<?php
+
+    require_once 'controllers/ClienteController.php';
+    $cliente = new ClienteController();
+    $clientes = $cliente->obtenerClientes();
+
+?>
 
 	<main role="main" class="container">
 
@@ -14,19 +21,24 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>Mark</td>
-						<td>@mdo</td>
-						<td>
-							<button type="button" class="btn btn-info">Editar</button>
-							<button type="button" class="btn btn-danger">Eliminar</button>
-						</td>
-					</tr>
+					<?php
+						if (!empty($clientes)) {
+							foreach ($clientes as $r) { 
+					?>
+						<tr>
+							<th scope="row"><?=$r['id'];?></th>
+							<td><?=$r['nombre'];?></td>
+							<td><?=$r['email'];?></td>
+							<td>
+								<button type="button" class="btn btn-info">Editar</button>
+								<button type="button" class="btn btn-danger">Eliminar</button>
+							</td>
+						</tr>
+					<?php } } ?>
 				</tbody>
 			</table>
 			<div class="text-left">
-				<a href="_form-insertar.php" class="btn btn-primary text-left">Insertar registro</a>				
+				<a href="?page=insertar" class="btn btn-primary text-left">Insertar registro</a>				
 			</div>
 		</div>
 
