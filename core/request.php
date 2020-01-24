@@ -1,19 +1,16 @@
 <?php
 
 require_once 'config.php';
+
 $page = $_GET['page'];
 
 if (!empty($page)) {
-	#http://curso-php.test/cms/index.php?page=buscar
+	#http://crud-mvc/index.php?page=insertar
 	$data = array(
-		'dashboard' => array('model' => 'Admin', 'view' => 'dashboard', 'controller' => 'AdminController'),
-		'registro' => array('model' => 'Usuario', 'view' => 'registro', 'controller' => 'UsuarioController'),
-		'login' => array('model' => 'Usuario', 'view' => 'login', 'controller' => 'UsuarioController'),
-		'blog' => array('model' => 'Blog', 'view' => 'index', 'controller' => 'BlogController'),
-		'publicar' => array('model' => 'Blog', 'view' => 'publicar', 'controller' => 'BlogController'), #Crear un artículo
-		'articulo' => array('model' => 'Blog', 'view' => 'leerArticulo', 'controller' => 'BlogController'),#Mostrar la info del art
-		'buscar' => array('model' => 'Blog', 'view' => 'resultadoBusqueda', 'controller' => 'BlogController'), #Encargado de buscar
-		'salir' => array('model' => 'Blog', 'view' => 'index', 'controller' => 'UsuarioController'), #Encargado de cerrar sesion
+		'inicio' => array('model' => 'ClienteModel', 'view' => 'inicio', 'controller' => 'ClienteController'),
+		'insertar' => array('model' => 'ClienteModel', 'view' => 'insertar', 'controller' => 'ClienteController'), #Crear un cliente
+		'editar' => array('model' => 'ClienteModel', 'view' => 'editar', 'controller' => 'ClienteController'), #Editar un cliente
+		'eliminar' => array('model' => 'ClienteModel', 'view' => 'eliminar', 'controller' => 'ClienteController'), 
 	);
 
 	foreach($data as $key => $components) {
@@ -31,5 +28,5 @@ if (!empty($page)) {
 		$objeto->$view();
 	}
 } else {
-	header('Location: index.php?page=blog');
+	header('Location: index.php?page=inicio');
 }
