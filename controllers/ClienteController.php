@@ -34,14 +34,6 @@ class ClienteController {
 	}
 
 	public function insertarCliente($datos) {
-		$errores = '';
-		if (!isset($datos['nombre'])) {
-			$errores .= '<p>Falta el nombre</p>';
-		} else if (!isset($datos['email'])) {
-			$errores .= '<p>Falta el correo</p>';
-		} else {
-			$errores = '';
-		}
 
 		$cliente = new Cliente();
 		$cliente->insertarCliente($datos);
