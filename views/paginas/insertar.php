@@ -1,10 +1,9 @@
 <?php 
 
 require_once 'controllers/ClienteController.php';
-
 $objeto = new ClienteController();
 
-if (isset($_POST['registrar'])) {
+if (isset($_POST['insertar'])) {
 	$datos = array(
 		'nombre'   => $_POST['nombre'],
 		'email'    => $_POST['email'],
@@ -30,7 +29,7 @@ if (isset($_POST['registrar'])) {
 						<input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp">
 						<small id="emailHelp" class="form-text text-muted">Ingrese el correo electronico del cliente.</small>
 					</div>
-					<button type="submit" name="registrar" class="btn btn-primary">Guardar registro</button>
+					<button type="submit" name="insertar" class="btn btn-primary">Guardar registro</button>
 				</form>
 			</div>
 		</div>

@@ -1,8 +1,8 @@
 <?php
 
     require_once 'controllers/ClienteController.php';
-    $cliente = new ClienteController();
-    $clientes = $cliente->obtenerClientes();
+    $objeto = new ClienteController();
+    $clientes = $objeto->obtenerClientes();
 
 ?>
 
