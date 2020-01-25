@@ -30,8 +30,8 @@
 							<td><?=$r['nombre'];?></td>
 							<td><?=$r['email'];?></td>
 							<td>
-								<button type="button" class="btn btn-info">Editar</button>
-								<button type="button" class="btn btn-danger">Eliminar</button>
+								<a href="?page=editar&id=<?= $r['id']; ?>" type="a" class="btn btn-info">Editar</a>
+								<a href="?page=eliminar&id=<?= $r['id']; ?>" type="a" class="btn btn-danger">Eliminar</a>
 							</td>
 						</tr>
 					<?php } } ?>
