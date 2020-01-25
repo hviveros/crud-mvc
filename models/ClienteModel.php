@@ -14,9 +14,9 @@ class Cliente extends ModeloBase {
 		return $resultado;
 	}
 
-	public function obtenerIdCliente($id) {
+	public function obtenerCliente($id) {
 		$db = new ModeloBase();
-		$query = "SELECT id FROM cliente WHERE id = '".$id."'";
+		$query = "SELECT * FROM cliente WHERE id = '".$id."'";
 		$resultado = $db->obtenerTodos($query);
 		return $resultado;
 	}
