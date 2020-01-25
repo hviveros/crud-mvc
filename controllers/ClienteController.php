@@ -45,6 +45,8 @@ class ClienteController {
 
 		$cliente = new Cliente();
 		$cliente->insertarCliente($datos);
+
+		header('Location: index.php?page=inicio&mensaje=Registro Exitoso');
 	}
 
 	public function editarClientes() {
