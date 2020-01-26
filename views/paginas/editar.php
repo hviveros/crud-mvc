@@ -11,12 +11,12 @@
     }
 
     if (isset($_POST['editar'])) {
+    	$id = $_POST['id'];
     	$datos = array(
-			'id'   		=> $_POST['id'],
 			'nombre'   	=> $_POST['nombre'],
 			'email'    	=> $_POST['email'],
 		);
-		$objeto->editarCliente($datos);
+		$objeto->editarCliente($id, $datos);
     }
 
 ?>

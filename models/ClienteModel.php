@@ -1,7 +1,7 @@
 <?php
 require_once 'ModeloBase.php';
 
-class Cliente extends ModeloBase {
+class ClienteModel extends ModeloBase {
 
 	public function __construct() {
 		parent::__construct();
@@ -25,16 +25,18 @@ class Cliente extends ModeloBase {
 		$db = new ModeloBase();
 		try {
 			$insertar = $db->insertar('cliente', $datos);
-			if ($insertar == true) {
-				$_SESSION['mensaje'] = 'Cliente registrado';
-			}
 		} catch (PDOException $e) {
-			$_SESSION['mensaje'] = $e->getMessage();
+			echo $e->getMessage();
 		}
 	}
 
-	public function editarCliente($id) {
-		#code
+	public function editarCliente($id, $datos) {
+		$db = new ModeloBase();
+		try {
+			$editar = $db->editar('cliente', $id, $datos);
+		} catch (PDOException $e) {
+			echo $e->getMessage();
+		}
 	}
 
 	public function eliminarCliente($id) {

@@ -35,14 +35,18 @@ class ClienteController {
 
 	public function insertarCliente($datos) {
 
-		$cliente = new Cliente();
+		$cliente = new ClienteModel();
 		$cliente->insertarCliente($datos);
 
 		header('Location: index.php?page=inicio&mensaje=Registro Exitoso');
 	}
 
-	public function editarClientes() {
-		#code
+	public function editarCliente($id, $datos) {
+
+		$cliente = new ClienteModel();		
+		$cliente->editarCliente($id, $datos);
+
+		header('Location: index.php?page=inicio&mensaje=Guardado con Éxito');
 	}
 
 	public function eliminarClientes() {
@@ -50,16 +54,13 @@ class ClienteController {
 	}
 
 	public function obtenerClientes() {
-		$clientes = new Cliente();
+		$clientes = new ClienteModel();
 		return $clientes->obtenerClientes();
 	}
 
-	public function obtenerIdCliente($id) {
-		$clientes = new Cliente();
-		$id = $clientes->obtenerIdCliente($id);
-		foreach ($id as $r){
-			return $r['id'];
-		}		 
+	public function obtenerCliente($id) {
+		$cliente = new ClienteModel();
+		return $cliente->obtenerCliente($id);
 	}
 
 
