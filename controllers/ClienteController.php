@@ -49,8 +49,11 @@ class ClienteController {
 		header('Location: index.php?page=inicio&mensaje=Guardado con Éxito');
 	}
 
-	public function eliminarClientes() {
-		#code
+	public function eliminarCliente($id) {
+		$cliente = new ClienteModel();
+		$cliente->eliminarCliente($id);
+
+		header('Location: index.php?page=inicio&mensaje=Registro Eliminado');
 	}
 
 	public function obtenerClientes() {

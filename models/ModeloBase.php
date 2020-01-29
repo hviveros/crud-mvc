@@ -51,6 +51,18 @@ class ModeloBase extends DB {
 		}
 	}
 
+	public function eliminar($tabla, $id) {
+		try {
+		    $sql = "DELETE FROM $tabla WHERE id = $id";
+		    $q = $this->db->prepare($sql);
+		    return $q->execute($datos);
+		} catch (PDOException $e) {
+			echo $e->getMessage();
+		} catch (Exception $e) {
+			echo $e->getMessage();
+		}
+	}
+
 	public function consultarRegistro($query) {
 		try {
 			$consulta = $this->db->query($query);

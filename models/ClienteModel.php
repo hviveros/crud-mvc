@@ -40,7 +40,12 @@ class ClienteModel extends ModeloBase {
 	}
 
 	public function eliminarCliente($id) {
-		#code
+		$db = new ModeloBase();
+		try {
+			$eliminar = $db->eliminar('cliente', $id);
+		} catch (PDOException $e) {
+			echo $e->getMessage();
+		}
 	}
 
 }
