@@ -1,6 +1,6 @@
 <?php
 
-require_once 'models/ClienteModel.php';
+require_once './models/ClienteModel.php';
 
 class ClienteController {
 

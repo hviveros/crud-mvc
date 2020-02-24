@@ -1,5 +1,5 @@
 <?php
 
-	define("NOMBRE_CRUD", "Crud MVC");
+	define("NOMBRE_SISTEMA", "Crud AJAX");
 
 ?>
