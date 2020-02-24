@@ -9,7 +9,7 @@
 	<main role="main" class="container">
 
 		<div class="starter-template">
-			<h1>CRUD sencillo con PHP - MVC - PDO</h1>
+			<h1>CRUD sencillo con PHP + AJAX</h1>
 			<div class="row">
 				<div class="col-md-6 offset-3">
 					<?php

@@ -19,7 +19,7 @@
 	<main role="main" class="container">
 
 		<div class="starter-template">
-			<h1>CRUD sencillo con PHP - MVC - PDO</h1>
+			<h1>CRUD sencillo con PHP + AJAX</h1>
 			<hr>
 			<div class="col-md-6 offset-3">
 				<form action="index.php?page=eliminar" method="POST" name="eliminarForm" id="eliminarForm" class="text-left">
