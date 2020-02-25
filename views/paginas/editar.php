@@ -5,6 +5,7 @@
 
     /*obtener el valor 'id' de la url para buscar en la bd
     y posteriormente llenar el formulario*/
+    
     if (isset($_GET['id'])) {
 	    $idCliente = $_GET['id'];
     	$cliente = $objeto->obtenerCliente($idCliente);
