@@ -3,7 +3,7 @@
 require_once 'controllers/ClienteController.php';
 $objeto = new ClienteController();
 
-if (isset($_POST['insertar'])) {
+if (isset($_POST['btnInsertar'])) {
 	$datos = array(
 		'nombre'   => $_POST['nombre'],
 		'email'    => $_POST['email'],
@@ -12,7 +12,8 @@ if (isset($_POST['insertar'])) {
 }
 
 ?>
-	<main role="main" class="container">
+
+<!-- 	<main role="main" class="container">
 
 		<div class="starter-template">
 			<h1>CRUD sencillo con PHP + AJAX</h1>
@@ -34,4 +35,4 @@ if (isset($_POST['insertar'])) {
 			</div>
 		</div>
 
-	</main><!-- /.container -->
+	</main> /.container --> 
