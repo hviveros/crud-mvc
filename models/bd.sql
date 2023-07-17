@@ -2,11 +2,11 @@
 Elemental: CRUD de clientes con MVC - PDO
 */
 
-DROP DATABASE IF EXISTS crudajax;
+DROP DATABASE IF EXISTS up_crud_mvc;
 
-CREATE DATABASE IF NOT EXISTS crudajax;
+CREATE DATABASE IF NOT EXISTS up_crud_mvc;
 
-USE crudajax;
+USE up_crud_mvc;
 
 /*tabla cliente*/
 CREATE TABLE cliente(

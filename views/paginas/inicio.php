@@ -6,17 +6,17 @@
 
 ?>
 
-	<main role="main" class="container">
+	<main role="main" class="container py-5 my-5">
 
 		<div class="starter-template">
-			<h1>CRUD sencillo con PHP + AJAX</h1>
+			<h1>CRUD sencillo con PHP MVC</h1>
 			<div class="row">
 				<div class="col-md-6 offset-3">
 					<?php
 						if (isset($_GET['mensaje'])) {
 							echo "<div class='alert alert-primary alert-dismissible fade show' role='alert'>
 									".$_GET['mensaje']."
-									<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+									<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'>
 		    							<span aria-hidden='true'>&times;</span>
 									</button>
 								</div>";
@@ -52,7 +52,7 @@
 				</tbody>
 			</table>
 			<div class="text-left">
-				<button class="btn btn-primary text-left" data-toggle="modal" data-target="#insertarRegistroModal">Insertar registro</button>				
+				<button type="button" class="btn btn-primary text-left" data-bs-toggle="modal" data-bs-target="#insertarRegistroModal">Insertar registro</button>				
 			</div>
 		</div>
 
@@ -65,7 +65,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title" id="agregarDatosModalLabel">Insertar nuevos registros</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
@@ -83,7 +83,7 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
 					<button type="button" id="btnInsertar" name="btnInsertar" class="btn btn-primary">Insertar</button>
 				</div>
 			</form>

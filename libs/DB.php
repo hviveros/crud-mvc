@@ -2,7 +2,7 @@
 
 class DB extends PDO {
 	private $hostname = 'localhost';
-	private $database = 'crudajax';
+	private $database = 'up_crud_mvc';
 	private $username = 'root';
 	private $password = '';
 	private $pdo;
